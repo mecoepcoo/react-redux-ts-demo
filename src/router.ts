@@ -6,23 +6,30 @@ export const routes = [
   {
     path: '/',
     exact: true,
-    component: loadable(() => import('@/pages/demo/HelloWorldDemo/HelloWorldDemoPage')),
-    name: 'home',
-    title: 'react-home'
+    component: loadable(() => import('@/pages/goods_list/GoodsListPage')),
+    name: 'GoodsList',
+    title: 'goods-list'
   },
   {
-    path: '/home',
+    path: '/goods/:id',
     exact: true,
-    component: loadable(() => import('@/pages/demo/HelloWorldDemo/HelloWorldDemoPage')),
-    name: 'home',
-    title: 'HelloWorld'
+    component: loadable(() => import('@/pages/goods/GoodsPage')),
+    name: 'Goods',
+    title: 'goods'
+  },
+  {
+    path: '/cart',
+    exact: true,
+    component: loadable(() => import('@/pages/cart/CartPage')),
+    name: 'Cart',
+    title: 'cart'
   },
   // 404 Not Found
   {
     path: '*',
     exact: true,
-    component: loadable(() => import('@/pages/demo/HelloWorldDemo/HelloWorldDemoPage')),
-    name: '404',
-    title: '404'
+    component: loadable(() => import('@/pages/goods_list/GoodsListPage')),
+    name: 'GoodsList',
+    title: 'goods-list'
   }
 ];
