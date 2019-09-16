@@ -33,3 +33,7 @@ export const routes = [
     title: 'goods-list'
   }
 ];
+
+export function beforeRouter(route: any) {
+  /* do something... */
+}
